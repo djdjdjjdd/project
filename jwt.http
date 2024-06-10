@@ -1,0 +1,9 @@
+GET http://localhost:3000/books
+Authorization: Bearere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTc5ODA4OTIsImV4cCI6MTcxNzk4MDkyMn0.sl7oD267hgfK-NkmS_OvpmiWrRe0f930Tp2hxJeQ3dE
+###
+
+POST http://localhost:3000/login
+Content-Type: application/json
+{
+    "username": "helo"
+}
