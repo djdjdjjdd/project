@@ -3,8 +3,11 @@ import { router } from "./router/index.js";
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 import { CONNECT_DB, GET_DB } from './config/mongodb.js';
+import { errorHandingMiddleware } from './middlewares/errorHandingMiddleware.js'
 dotenv.config()
 const app = express();
+app.use(router)
+app.use(errorHandingMiddleware)
 app.use(express.json());
 app.get('/test', (req, res, next) => {
     console.log(1);
